@@ -64,7 +64,7 @@ class AddFolderForm extends Component {
         return (
             <form onSubmit={(e) => this.buttonSubmit(e)}>
                 <label htmlFor="name">Folder Name:</label>
-                <input type="text" name="name" id="name" value={this.state.newFolderName} onChange={e => this.setName(e.target.value)}></input>
+                <input type="text" name="name" id="name" value={this.state.newFolderName} onChange={e => this.setName(e.target.value)} required></input>
                 <br />
                 <button type="Submit" className='submitButton' disabled={this.validateFolderName()}>Submit</button>
                 <div className="errorArea">

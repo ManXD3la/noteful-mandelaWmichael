@@ -105,11 +105,11 @@ class AddNoteForm extends Component {
         return (
             <form onSubmit={(e) => this.buttonSubmit(e)}>
                 <label htmlFor="name">Note Name:</label>
-                <input type="text" name="name" id="name" value={this.state.newNoteName} onChange={e => this.setName(e.target.value)}></input><br/>
+                <input type="text" name="name" id="name" value={this.state.newNoteName} onChange={e => this.setName(e.target.value)} required></input><br/>
                 <label htmlFor="folderOwner">Select Folder:</label>
-                <select name="folderOwner" id="folder">{folderOptions}</select><br/>
+                <select name="folderOwner" id="folder" required>{folderOptions}</select><br/>
                 <label htmlFor="content">Note Content:</label>
-                <input type="text" name="content" id="content" value={this.state.newNoteContent} onChange={e => this.setContent(e.target.value)}></input>
+                <input type="text" name="content" id="content" value={this.state.newNoteContent} onChange={e => this.setContent(e.target.value)} required></input>
                 <br />
                 <button type="Submit" className='submitButton' disabled={this.validateNoteName() || this.validateContent()}>Submit</button>
                 <div className="errorArea">
