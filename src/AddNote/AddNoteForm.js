@@ -17,7 +17,7 @@ class AddNoteForm extends Component {
 
     buttonSubmit = (event) => {
         event.preventDefault();
-        let newDate
+        let newDate = new Date()
         let whenModified = (newDate.getMonth()+1)+'/'+newDate.getDate()+'/'+newDate.getFullYear(); //may need to alter
         let newNote = {
             name: event.target.elements.name.value,
