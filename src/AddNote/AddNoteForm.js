@@ -3,7 +3,6 @@ import ApiContext from '../ApiContext';
 import PropTypes from 'prop-types';
 import config from '../config'
 import './AddNoteForm.css'
-import Cuid from 'cuid';
 
 class AddNoteForm extends Component {
     state = {
@@ -18,7 +17,8 @@ class AddNoteForm extends Component {
 
     buttonSubmit = (event) => {
         event.preventDefault();
-        let whenModified = new Date(); //may need to alter
+        let newDate
+        let whenModified = (newDate.getMonth()+1)+'/'+newDate.getDate()+'/'+newDate.getFullYear(); //may need to alter
         let newNote = {
             name: event.target.elements.name.value,
             content: event.target.elements.content.value,

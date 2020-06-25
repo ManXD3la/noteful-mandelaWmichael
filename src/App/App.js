@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Route, Link} from 'react-router-dom';
-import Cuid from 'cuid';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import NoteListNav from '../NoteListNav/NoteListNav';
 import NotePageNav from '../NotePageNav/NotePageNav';
