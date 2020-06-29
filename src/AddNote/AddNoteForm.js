@@ -24,10 +24,8 @@ class AddNoteForm extends Component {
             content: event.target.elements.content.value,
             folderId: event.target.elements.folderOwner.value,
             modified: whenModified
-            //,id: Cuid()
-
         };
-        console.log(newNote);
+        // console.log(newNote);
 
         let reqBody= JSON.stringify({'name':newNote.name,
                                     'content':newNote.content,
@@ -51,7 +49,9 @@ class AddNoteForm extends Component {
                 this.context.newNote(res);
                 this.props.history.push('/');
             })
-            .then(console.log(this.context));
+            .then(console.log(this.context))
+            .catch(console.error('Could not process request. Please try again later'));
+            
     }
 
     setName = name => {

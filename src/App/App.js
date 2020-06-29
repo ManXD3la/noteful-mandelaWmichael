@@ -54,7 +54,7 @@ class App extends Component {
                 this.setState({notes, folders});
             })
             .catch(error => {
-                console.error({error});
+                console.error('Could not process request',{error});
             });
     };
 

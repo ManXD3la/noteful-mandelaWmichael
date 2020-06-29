@@ -36,7 +36,8 @@ class AddFolderForm extends Component {
                 this.context.newFolder(res);
                 this.props.history.push('/');
             })
-            .then(console.log(this.context));
+            .then(console.log(this.context))
+            .catch(console.error('Could not process request. Please try again later'));
     }
 
     setName = name => {
